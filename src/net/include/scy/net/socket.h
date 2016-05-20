@@ -230,7 +230,7 @@ public:
 //
 
     
-#if WIN32
+#ifdef WIN32
 #define nativeSocketFd(handle) ((handle)->socket)
 #else
 // uv__stream_fd taken from libuv unix/internal.h
