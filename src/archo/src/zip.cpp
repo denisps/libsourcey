@@ -156,7 +156,7 @@ bool ZipFile::extractCurrentFile(const std::string& path, bool whiny)
         TraceL << "Extracting asset: " << outPath << endl;
 
         // Create directory
-#if !WIN32
+#ifndef WIN32
         const int FILE_ATTRIBUTE_DIRECTORY = 0x10;
 #endif
         if (info.external_fa & FILE_ATTRIBUTE_DIRECTORY ||
